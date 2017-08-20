@@ -3,7 +3,7 @@ The Schneidzekk medic gun for Killing Floor 2
 
 \<myKF2dir\> = C:\Users\\\<UserName\>\Documents\My Games\KillingFloor2\KFGame
 
-\<KF2SDKdir\> = "C:\Program Files (x86)\Steam\steamapps\common\killingfloor2
+\<KF2SDKdir\> = C:\Program Files (x86)\Steam\steamapps\common\killingfloor2
 
 * Clone/UnZip to \<myKF2dir\>\Src\
 * Copy the Packages\ subdirectory to \<myKF2dir\>\Published\BrewedPC\
