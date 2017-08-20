@@ -23,7 +23,7 @@ static simulated event EFilterTypeUI GetTraderFilter()
 defaultproperties
 {
 	// Healing charge
-	HealAmount=15
+	HealAmount=20
 	HealFullRechargeSeconds=10
 
 	// Inventory
@@ -84,18 +84,19 @@ defaultproperties
 	WeaponFireTypes(DEFAULT_FIREMODE)=EWFT_InstantHit
 	WeaponProjectiles(DEFAULT_FIREMODE)=class'KFProj_Bullet_AssaultRifle'
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'KFDT_Ballistic_Kriss'
-	FireInterval(DEFAULT_FIREMODE)=+.06 //? 952 RPM
+	FireInterval(DEFAULT_FIREMODE)=+.063 // 952 RPM
 	Spread(DEFAULT_FIREMODE)=0.01
 	InstantHitDamage(DEFAULT_FIREMODE)=40.0
 	FireOffset=(X=30,Y=4.5,Z=-5)
 
 	// ALTFIRE_FIREMODE
 	AmmoCost(ALTFIRE_FIREMODE)=30
-	FireModeIconPaths(ALTFIRE_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletSingle'
-	FiringStatesArray(ALTFIRE_FIREMODE)=WeaponSingleFiring
+//	FireModeIconPaths(ALTFIRE_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletSingle'
+//	FiringStatesArray(ALTFIRE_FIREMODE)=WeaponSingleFiring
 //	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_InstantHit
 //	WeaponProjectiles(ALTFIRE_FIREMODE)=class'KFProj_Bullet_AssaultRifle'
 //	InstantHitDamageTypes(ALTFIRE_FIREMODE)=class'KFDT_Ballistic_Kriss'
+//	FireInterval(ALTFIRE_FIREMODE)=+.50
 //	Spread(ALTFIRE_FIREMODE)=0.015
 
 	// BASH_FIREMODE
