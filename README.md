@@ -12,5 +12,6 @@ The Schneidzekk medic gun for Killing Floor 2
 * Enter: KFEditor.exe make -useunpublished
 * Enter: KFEditor.exe" brewcontent -platform=PC SchneidZekk
 * On game console enter: open \<KF-MapName\>?Game=SchneidZekk.SchneidzekkGameInfo_survival
+* Better yet: open \<KF-MapName\>?Mutator=SchneidZekk.SchneidzekkMutator
 
 Enjoy my favorite KF1 weapon.
