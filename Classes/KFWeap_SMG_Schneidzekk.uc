@@ -91,6 +91,7 @@ defaultproperties
 
 	// ALTFIRE_FIREMODE
 	AmmoCost(ALTFIRE_FIREMODE)=30
+	FireModeIconPaths(ALTFIRE_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_MedicDart'
 //	FireModeIconPaths(ALTFIRE_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletSingle'
 //	FiringStatesArray(ALTFIRE_FIREMODE)=WeaponSingleFiring
 //	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_InstantHit
@@ -122,4 +123,5 @@ defaultproperties
 
 	AssociatedPerkClasses(0)=class'KFPerk_FieldMedic'
 	AssociatedPerkClasses(1)=class'KFPerk_SWAT'
+
 }
