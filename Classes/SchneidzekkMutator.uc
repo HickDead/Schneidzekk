@@ -34,12 +34,15 @@ event PreBeginPlay()
 }
 */
 
-event PostBeginPlay()
+simulated event PostBeginPlay()
 {
 	Super.PostBeginPlay();
-	`log("****************** Schneidzekk mutator: PostBeginPlay");
+//	`log("****************** Schneidzekk mutator: PostBeginPlay");
 
-	SetTimer( 1.0, true, 'addMyWeaponTimer');
+	if( ! AddMyWeapon() )
+		SetTimer( 1.0f, true, 'addMyWeaponTimer');
+//		SetTimer( 0.1f, true, 'addMyWeaponTimer');
+//		SetTimer( 0.000001f, true, 'addMyWeaponTimer');
 }
 
 simulated function addMyWeaponTimer()
@@ -56,25 +59,39 @@ private simulated final function bool AddMyWeapon()
 	local KFGFxObject_TraderItems TI;
 	local STraderItem MyWep;
 
-//	`log("****************** Schneidzekk mutator: adding MyWeapon");
+	`log("****************** Schneidzekk mutator: adding MyWeapon");
 
 	WI = class'WorldInfo'.Static.GetWorldInfo();
 
+
 	if (WI != none)
 		KFGRI = KFGameReplicationInfo(WI.GRI);
-//	else
-//		`log("****************** Schneidzekk mutator: WI==none");
+	else
+	{
+		`log("****************** Schneidzekk mutator: WI==none");
+		return false;
+	}
 
 	if (KFGRI != none)
 		TI = KFGRI.TraderItems;
-//	else
-//		`log("****************** Schneidzekk mutator: KFGRI==none");
+	else
+	{
+		`log("****************** Schneidzekk mutator: KFGRI==none");
+		return false;
+	}
 
 	if (TI == none)
 	{
-//		`log("****************** Schneidzekk mutator: TI==none");
+		`log("****************** Schneidzekk mutator: TI==none");
 		return false;
 	}
+
+	if( TI.SaleItems.Length < 1 )
+	{
+		`log("****************** Schneidzekk mutator: SaleItems empty!");
+		return false;
+	}
+
 
 	MyWep = BuildMyWeapon(); // Construct the weapon
 
@@ -82,7 +99,7 @@ private simulated final function bool AddMyWeapon()
 
 	TI.SetItemsInfo(TI.SaleItems); // Not sure what this native does, but may be important. Needed? YES!
 
-//	`log("****************** Schneidzekk mutator added MyWeapon");
+	`log("****************** Schneidzekk mutator added MyWeapon");
 
 	return true;
 }
@@ -130,4 +147,9 @@ defaultproperties
 
 	Name="Default__SchneidzekkMutator"
 	ObjectArchetype=KFMutator'KFGame.Default__KFMutator'
+
+
+	bAlwaysRelevant=true
+	RemoteRole=ROLE_SimulatedProxy
+
 }
