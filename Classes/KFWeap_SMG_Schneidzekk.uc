@@ -27,7 +27,8 @@ defaultproperties
 	HealFullRechargeSeconds=10
 
 	// Inventory
-	InventorySize=3
+//	InventorySize=3
+	InventorySize=4
 	GroupPriority=75
 	WeaponSelectTexture=Texture2D'WEP_UI_KRISS_TEX.UI_WeaponSelect_KRISS'
 	SecondaryAmmoTexture=Texture2D'UI_SecondaryAmmo_TEX.MedicDarts'

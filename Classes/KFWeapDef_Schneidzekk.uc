@@ -16,8 +16,10 @@ DefaultProperties
 {
 	WeaponClassPath="Schneidzekk.KFWeap_SMG_Schneidzekk"
 
-	BuyPrice=825
-	AmmoPricePerMag=10
+//	BuyPrice=825
+//	AmmoPricePerMag=10
+	BuyPrice=1100
+	AmmoPricePerMag=44
 	ImagePath="WEP_UI_KRISS_TEX.UI_WeaponSelect_KRISS"
 
 	EffectiveRange=70

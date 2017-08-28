@@ -93,6 +93,13 @@ private simulated final function bool AddMyWeapon()
 	}
 
 
+	foreach TI.SaleItems(myWep)
+	{
+		if( myWep.ClassName == MyWepClass.Name )
+			return true;
+	}
+
+
 	MyWep = BuildMyWeapon(); // Construct the weapon
 
 	TI.SaleItems.AddItem(MyWep); // Add weapon to SaleItems array
@@ -139,6 +146,19 @@ private simulated final function STraderItem BuildMyWeapon()
 
 	return Wep;
 }
+
+
+// prevent the mutator being added more then once
+function AddMutator(Mutator M)
+{
+	if( M!=Self )
+	{
+		if( M.Class==Class )
+			M.Destroy();
+		else Super.AddMutator(M);
+	}
+}
+
 
 defaultproperties
 {
