@@ -15,3 +15,5 @@ The Schneidzekk medic gun for Killing Floor 2
 * Better yet: open \<KF-MapName\>?Mutator=SchneidZekk.SchneidzekkMutator
 
 Enjoy my favorite KF1 weapon.
+
+See [the Schneidzekk workshop item](http://steamcommunity.com/sharedfiles/filedetails/?id=1117901956 "on steam") for more information.
