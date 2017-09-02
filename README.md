@@ -9,7 +9,7 @@ The Schneidzekk medic gun for Killing Floor 2
 * Copy the Packages\ subdirectory into \<KF2Userdir\>\KFGame\Published\BrewedPC\
 * Open command prompt in \<KF2SDKdir\>\Binaries\Win64\
 * Enter: KFEditor.exe make -useunpublished
-* Enter: KFEditor.exe" brewcontent -platform=PC SchneidZekk
+* Enter: KFEditor.exe brewcontent -platform=PC SchneidZekk
 * Copy the Localization\ subdirectory into \<KF2Userdir\>\KFGame\
 * On game console enter: open \<KF-MapName\>?Game=SchneidZekk.SchneidzekkGameInfo_survival
 * Better yet: open \<KF-MapName\>?Mutator=SchneidZekk.SchneidzekkMutator
