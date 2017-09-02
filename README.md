@@ -5,7 +5,7 @@ The Schneidzekk medic gun for Killing Floor 2
 \<KF2SDKdir\> = C:\Program Files (x86)\Steam\steamapps\common\killingfloor2
 
 * Clone/UnZip to \<KF2Userdir\>\KFGame\Src\
-* Edit \<KF2Userdir\>\KFGame\Confg\KFEditor.ini and add ModPackages=DummyMod to the [ModPackages] section.
+* Edit \<KF2Userdir\>\KFGame\Confg\KFEditor.ini and add ModPackages=Schneidzekk to the [ModPackages] section.
 * Copy the Packages\ subdirectory to \<KF2Userdir\>\KFGame\Published\BrewedPC\
 * Open command prompt in \<KF2SDKdir\>\Binaries\Win64\
 * Enter: KFEditor.exe make -useunpublished
