@@ -90,16 +90,18 @@ defaultproperties
 	InstantHitDamage(DEFAULT_FIREMODE)=40.0
 	FireOffset=(X=30,Y=4.5,Z=-5)
 
-	// ALTFIRE_FIREMODE
-	AmmoCost(ALTFIRE_FIREMODE)=30
+	// ALT_FIREMODE
 	FireModeIconPaths(ALTFIRE_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_MedicDart'
-//	FireModeIconPaths(ALTFIRE_FIREMODE)=Texture2D'ui_firemodes_tex.UI_FireModeSelect_BulletSingle'
-//	FiringStatesArray(ALTFIRE_FIREMODE)=WeaponSingleFiring
-//	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_InstantHit
-//	WeaponProjectiles(ALTFIRE_FIREMODE)=class'KFProj_Bullet_AssaultRifle'
-//	InstantHitDamageTypes(ALTFIRE_FIREMODE)=class'KFDT_Ballistic_Kriss'
-//	FireInterval(ALTFIRE_FIREMODE)=+.50
-//	Spread(ALTFIRE_FIREMODE)=0.015
+	FiringStatesArray(ALTFIRE_FIREMODE)=WeaponSingleFiring
+	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_Projectile
+	WeaponProjectiles(ALTFIRE_FIREMODE)=class'KFProj_HealingDart'
+	FireInterval(ALTFIRE_FIREMODE)=+.50
+	InstantHitDamage(ALTFIRE_FIREMODE)=0	//Acidic compound skill can adjust that
+	InstantHitDamageTypes(ALTFIRE_FIREMODE)=class'KFDT_Dart_Toxic'
+	Spread(ALTFIRE_FIREMODE)=0.015
+	AmmoCost(ALTFIRE_FIREMODE)=30
+	HealingDartDamageType=class'KFDT_Dart_Healing'
+	DartFireSnd=(DefaultCue=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Dart_Fire_3P', FirstPersonCue=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Dart_Fire_1P')
 
 	// BASH_FIREMODE
 	InstantHitDamage(BASH_FIREMODE)=26.0
