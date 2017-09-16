@@ -44,7 +44,7 @@ defaultproperties
 
 	Begin Object Name=FirstPersonMesh
 		SkeletalMesh=SkeletalMesh'wep_1p_kriss_mesh.Wep_1stP_KRISS_Rig'
-		AnimSets(0)=AnimSet'wep_1p_kriss_anim.wep_1p_kriss_anim'
+		AnimSets(0)=AnimSet'wep_1p_schneidzekk_anim.wep_1p_schneidzekk_anim'
 	End Object
 
 	Begin Object Name=StaticPickupComponent
