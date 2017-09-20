@@ -95,7 +95,8 @@ defaultproperties
 	FiringStatesArray(ALTFIRE_FIREMODE)=WeaponSingleFiring
 	WeaponFireTypes(ALTFIRE_FIREMODE)=EWFT_Projectile
 	WeaponProjectiles(ALTFIRE_FIREMODE)=class'KFProj_HealingDart'
-	FireInterval(ALTFIRE_FIREMODE)=+.50
+	FireInterval(ALTFIRE_FIREMODE)=+0.175
+//	FireInterval(ALTFIRE_FIREMODE)=+0.50
 	InstantHitDamage(ALTFIRE_FIREMODE)=0	//Acidic compound skill can adjust that
 	InstantHitDamageTypes(ALTFIRE_FIREMODE)=class'KFDT_Dart_Toxic'
 	Spread(ALTFIRE_FIREMODE)=0.015
