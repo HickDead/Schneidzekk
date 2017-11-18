@@ -93,18 +93,21 @@ private simulated final function bool AddMyWeapon()
 	}
 
 
-	foreach TI.SaleItems(myWep)
-	{
-		if( myWep.ClassName == MyWepClass.Name )
+	if( TI.SaleItems.Find( 'ClassName', MyWepClass.Name) >= 0 )
 			return true;
-	}
+//	foreach TI.SaleItems(myWep)
+//	{
+//		if( myWep.ClassName == MyWepClass.Name )
+//			return true;
+//	}
 
 
 	MyWep = BuildMyWeapon(); // Construct the weapon
+	MyWep.ItemID=TI.SaleItems.Length;
 
 	TI.SaleItems.AddItem(MyWep); // Add weapon to SaleItems array
 
-	TI.SetItemsInfo(TI.SaleItems); // Not sure what this native does, but may be important. Needed? YES!
+//	TI.SetItemsInfo(TI.SaleItems); // Not sure what this native does, but may be important. Needed?
 
 	`log("****************** Schneidzekk mutator added MyWeapon");
 
@@ -122,7 +125,18 @@ private simulated final function STraderItem BuildMyWeapon()
 	Wep.WeaponDef = MyWepDefClass;
 	Wep.ClassName = MyWepClass.Name;
 
-////	Wep.AssociatedPerkClasses = MyWepClass.Default.AssociatedPerkClasses;	// Error, Can't access protected variable 'AssociatedPerkClasses' in 'KFWeapon'
+/**/
+	if( class<KFWeap_DualBase>(MyWepClass) != none && class<KFWeap_DualBase>(MyWepClass).Default.SingleClass != none )
+		Wep.SingleClassName=class<KFWeap_DualBase>(MyWepClass).Default.SingleClass.Name;
+//	else
+//		Wep.SingleClassName = '';
+
+	if( MyWepClass.Default.DualClass != none )
+		Wep.DualClassName = MyWepClass.Default.DualClass.Name;
+//	else
+//		Wep.DualClassName = '';
+/**/
+
 	Wep.AssociatedPerkClasses = MyWepClass.Static.GetAssociatedPerkClasses();
 
 	Wep.MagazineCapacity = MyWepClass.Default.MagazineCapacity[0];
@@ -133,14 +147,25 @@ private simulated final function STraderItem BuildMyWeapon()
 	Wep.MaxSecondaryAmmo = MyWepClass.Default.SpareAmmoCapacity[1]; // Correct?
 
 	Wep.BlocksRequired = MyWepClass.Default.InventorySize;
-
-	MyWepClass.Static.SetTraderWeaponStats(Wep.WeaponStats);
+//	MyWepClass.Static.SetTraderWeaponStats(Wep.WeaponStats);
 
 	Wep.InventoryGroup = MyWepClass.Default.InventoryGroup;
 	Wep.GroupPriority = MyWepClass.Default.GroupPriority;
 
 	Wep.TraderFilter = MyWepClass.Static.GetTraderFilter();
 	Wep.AltTraderFilter = MyWepClass.Static.GetAltTraderFilter();
+
+/**/
+	if( MyWepClass.Default.SecondaryAmmoTexture != None )
+		Wep.SecondaryAmmoImagePath = "img://"$PathName(MyWepClass.Default.SecondaryAmmoTexture);
+	Wep.InventoryGroup = MyWepClass.Default.InventoryGroup;
+	Wep.GroupPriority = MyWepClass.Default.GroupPriority;
+
+//	MyWepClass.Static.SetTraderWeaponStats( WepStats);
+//	Wep.WeaponStats = WepStats;
+	MyWepClass.Static.SetTraderWeaponStats( Wep.WeaponStats);
+
+/**/
 
 //	`log("****************** Schneidzekk mutator: built MyWeapon");
 

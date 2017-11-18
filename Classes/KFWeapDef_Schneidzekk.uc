@@ -6,7 +6,6 @@
 //=============================================================================
 // Killing Floor 2
 // Copyright (C) 2017 HickDead
-//  - HickDead 2017.08.18
 //=============================================================================
 
 class KFWeapDef_Schneidzekk extends KFWeaponDefinition
@@ -18,8 +17,8 @@ DefaultProperties
 
 //	BuyPrice=825
 //	AmmoPricePerMag=10
-	BuyPrice=1100
-	AmmoPricePerMag=44
+	BuyPrice=1350
+	AmmoPricePerMag=40
 	ImagePath="WEP_UI_KRISS_TEX.UI_WeaponSelect_KRISS"
 
 	EffectiveRange=70

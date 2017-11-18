@@ -5,7 +5,6 @@
 //=============================================================================
 // Killing Floor 2
 // Copyright (C) 2017 HickDead
-//  - HickDead 2017.08.18
 //=============================================================================
 
 class KFWeap_SMG_Schneidzekk extends KFWeap_MedicBase;
@@ -28,7 +27,7 @@ defaultproperties
 
 	// Inventory
 //	InventorySize=3
-	InventorySize=4
+	InventorySize=5
 	GroupPriority=75
 	WeaponSelectTexture=Texture2D'WEP_UI_KRISS_TEX.UI_WeaponSelect_KRISS'
 	SecondaryAmmoTexture=Texture2D'UI_SecondaryAmmo_TEX.MedicDarts'
@@ -43,8 +42,8 @@ defaultproperties
 	PlayerViewOffset=(X=20.f,Y=9.5f,Z=-3.0f)
 
 	Begin Object Name=FirstPersonMesh
-		SkeletalMesh=SkeletalMesh'wep_1p_kriss_mesh.Wep_1stP_KRISS_Rig'
-		AnimSets(0)=AnimSet'wep_1p_schneidzekk_anim.wep_1p_schneidzekk_anim'
+		SkeletalMesh=SkeletalMesh'WEP_1P_Schneidzekk_MESH.Wep_1stP_Schneidzekk_Rig'
+		AnimSets(0)=AnimSet'wep_1p_schneidzekk_anim.Wep_1stP_Schneidzekk_Anim'
 	End Object
 
 	Begin Object Name=StaticPickupComponent
@@ -87,7 +86,7 @@ defaultproperties
 	InstantHitDamageTypes(DEFAULT_FIREMODE)=class'KFDT_Ballistic_Kriss'
 	FireInterval(DEFAULT_FIREMODE)=+.063 // 952 RPM
 	Spread(DEFAULT_FIREMODE)=0.01
-	InstantHitDamage(DEFAULT_FIREMODE)=40.0
+	InstantHitDamage(DEFAULT_FIREMODE)=36.0
 	FireOffset=(X=30,Y=4.5,Z=-5)
 
 	// ALT_FIREMODE
@@ -111,7 +110,7 @@ defaultproperties
 	// Fire Effects
 	MuzzleFlashTemplate=KFMuzzleFlash'wep_kriss_arch.Wep_KRISS_MuzzleFlash'
 	WeaponFireSnd(DEFAULT_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_KRISS.Play_KRISS_Fire_3P_Loop', FirstPersonCue=AkEvent'WW_WEP_KRISS.Play_KRISS_Fire_1P_Loop')
-	WeaponFireSnd(ALTFIRE_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_KRISS.Play_KRISS_Fire_3P_Single', FirstPersonCue=AkEvent'WW_WEP_KRISS.Play_KRISS_Fire_1P_Single')
+//	WeaponFireSnd(ALTFIRE_FIREMODE)=(DefaultCue=AkEvent'WW_WEP_KRISS.Play_KRISS_Fire_3P_Single', FirstPersonCue=AkEvent'WW_WEP_KRISS.Play_KRISS_Fire_1P_Single')
 	WeaponDryFireSnd(DEFAULT_FIREMODE)=AkEvent'WW_WEP_SA_MedicSMG.Play_SA_MedicSMG_Handling_DryFire'
 	WeaponDryFireSnd(ALTFIRE_FIREMODE)=AkEvent'WW_WEP_SA_MedicDart.Play_WEP_SA_Medic_Dart_DryFire'
 

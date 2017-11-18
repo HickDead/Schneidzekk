@@ -13,6 +13,8 @@ class SchneidzekkGameReplicationInfo extends KFGameReplicationInfo;
 DefaultProperties
 {
 
-	TraderItems=KFGFxObject_TraderItems'SchneidzekkPackage.SchneidzekkTraderItems'
+//	TraderItems=KFGFxObject_TraderItems'SchneidzekkPackage.SchneidzekkTraderItems'
+	TraderItems=KFGFxObject_TraderItems'SZ_Trader_ARCH.SchneidzekkTraderItems'
+
 }
 
